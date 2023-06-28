@@ -1,0 +1,300 @@
+@import 'colors';
+
+*, *::after, *::before{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    font-size: 14px;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color:$bg-color;
+<<<<<<< Updated upstream
+=======
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+>>>>>>> Stashed changes
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+<<<<<<< Updated upstream
+    position: sticky;
+    border-bottom: 2px solid $text-color-expire;
+    align-items: start;
+=======
+    width: 100%;
+    //aside panel
+>>>>>>> Stashed changes
+    .panel{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+<<<<<<< Updated upstream
+=======
+        width: 100%;
+>>>>>>> Stashed changes
+        padding-top:10px ;
+        padding-bottom: 10px;
+        &__contactpanel{
+            margin: auto 0 ;
+<<<<<<< Updated upstream
+=======
+            align-items: start;
+>>>>>>> Stashed changes
+            &--call{
+                display: inline;
+            }
+            &--mail{
+                display: inline;
+            }
+            }
+        &__accountpanel{
+            display: none;
+<<<<<<< Updated upstream
+=======
+            align-items: end;
+>>>>>>> Stashed changes
+                &--login{
+                    display: inline;
+                    padding: 10px;
+                    padding-top: 14px;
+                    padding-left: 0px;
+                    border-left: 1px solid $text-color-expire;
+                    border-right: 1px solid $text-color-expire;
+                }
+                &--register{
+                    display: inline;
+                    padding: 10px;
+                    padding-top: 14px;
+                    border-right: 1px solid $text-color-expire;
+                    padding-left: 0px;
+                }
+                .aside-hover{
+                    transition: 0.5s;
+                }
+                .aside-hover:hover{
+                    background-color: $text-color-expire;
+                }
+            
+        }
+
+        a{
+            text-decoration: none;
+        }
+        span{
+            color: $text-color;
+            font-size: 0.9rem;
+        }
+        img{
+            color: $pink-main;
+            margin: auto 0;
+            margin-right: 0.5rem;
+            margin-left: 0.5rem;
+            transform-origin: center center;
+            transform: scale(1.1);    }
+}
+<<<<<<< Updated upstream
+=======
+.underline{
+    border-top: 2px solid $text-color-expire;
+    width: 140%;
+}
+    //main header panel
+    .mainheader{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        &__sectionleft{
+            display: flex;
+            flex-direction: row;
+            &--btn{
+                margin: 15px ;
+                margin-left: 10px;
+                margin-right: 0px;
+                padding: 5px;
+                min-width: 50px;
+                border: 1px solid $bg-color;
+                background-color: none;
+                border-radius: 5px;
+                transition: 0.5s;
+                cursor: pointer;
+                i{  
+                    transition: 0.5s;
+                    scale: 1.5;
+                }
+            }
+            &--btn:hover{
+                border: 1px solid $text-color-expire;
+                background-color: $pink-inserts;
+                i{
+                    transform: scale(1.2);
+                }
+            }   
+            &--logo{
+                display: none;
+                margin: 5px;
+                margin-left: 0px;
+                img{
+                    scale: 0.6;
+                }
+            }
+        }
+        &__sectionright{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            &--search{
+                display: flex;
+                flex-direction: row;
+                border-bottom: 2px solid ;
+                max-height: 40%;
+                margin-right: 10px;
+                input{
+                    font-size: 0.9rem;
+                    margin: 0;
+                    background-color: $bg-color;
+                    border: none;
+                    padding: 5px;
+                    margin-right: 5px;
+                    margin-left: 5px;
+                }
+                input:focus{
+                    border: none;
+                    box-shadow: none;
+                }
+                button{
+                    border: none;
+                    margin-right: 10px;
+                    cursor: pointer;
+                    background-color: $bg-color;
+                    img{
+                        background-color: $bg-color;
+                        transition: 0.5s;
+                    }
+                }
+                button:hover{
+                    
+                    img{
+                        transform: scale(1.2);
+                    }
+                }
+            }
+            &--basket{
+                position: relative;
+                padding: 10px;
+                margin-right: 10px;
+                .basket_counter{
+                    position: absolute;
+                    bottom: 10%;
+                    right: 10%;
+                    font-size: 0.8rem;
+                    background-color: $pink-inserts;
+                    border-radius: 50%;
+                    padding: 3px;
+                }
+            }
+        }
+
+    }
+>>>>>>> Stashed changes
+}
+
+@media (min-width: 576px) { 
+    header{
+<<<<<<< Updated upstream
+        position: static;
+        align-items: center;
+        .panel{
+            width: 90%;
+=======
+        align-items: center;
+        width: 90%;
+        .panel{
+>>>>>>> Stashed changes
+            &__accountpanel{
+                display: flex;
+                flex-direction: row;
+            }
+        }
+<<<<<<< Updated upstream
+    }
+=======
+        .mainheader{
+            &__sectionleft{
+                &--logo{
+                    display: block;
+                    img{
+                        scale: 0.7;
+                    }
+                }
+            }
+            &__sectionright{
+                &--search{
+                    input{
+                        font-size: 1rem;
+                    }
+                }
+                &--basket{
+                    .basket_counter{
+                        position: absolute;
+                        bottom: 10%;
+                        right: 10%;
+                        font-size: 1rem;
+                    }
+                }
+            }
+    
+        }
+    }
+
+
+>>>>>>> Stashed changes
+ }
+
+@media (min-width: 768px) { 
+    header{
+<<<<<<< Updated upstream
+        .panel{
+            width: 80%;
+=======
+        width: 80%;
+        .panel{
+
+>>>>>>> Stashed changes
+            span{
+                font-size: 1.1rem;
+            }
+            img{
+                transform: scale(1.2);    }
+        }
+       
+    }
+ }
+
+
+@media (min-width: 1200px) {     
+    header{
+<<<<<<< Updated upstream
+    .panel{
+        width: 75%;
+=======
+        width: 75%;
+    .panel{
+
+>>>>>>> Stashed changes
+        span{
+            font-size: 1.25rem;
+        }
+        img{
+            transform: scale(1.4);    
+        }
+    }
+   
+} }

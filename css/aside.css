@@ -1,0 +1,263 @@
+*, *::after, *::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 14px;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #ebecf2;
+<<<<<<< Updated upstream
+=======
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+>>>>>>> Stashed changes
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+<<<<<<< Updated upstream
+  position: sticky;
+  border-bottom: 2px solid #858585;
+  align-items: start;
+=======
+  width: 100%;
+>>>>>>> Stashed changes
+}
+header .panel {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+<<<<<<< Updated upstream
+=======
+  width: 100%;
+>>>>>>> Stashed changes
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+header .panel__contactpanel {
+  margin: auto 0;
+<<<<<<< Updated upstream
+=======
+  align-items: start;
+>>>>>>> Stashed changes
+}
+header .panel__contactpanel--call {
+  display: inline;
+}
+header .panel__contactpanel--mail {
+  display: inline;
+}
+header .panel__accountpanel {
+  display: none;
+<<<<<<< Updated upstream
+=======
+  align-items: end;
+>>>>>>> Stashed changes
+}
+header .panel__accountpanel--login {
+  display: inline;
+  padding: 10px;
+  padding-top: 14px;
+  padding-left: 0px;
+  border-left: 1px solid #858585;
+  border-right: 1px solid #858585;
+}
+header .panel__accountpanel--register {
+  display: inline;
+  padding: 10px;
+  padding-top: 14px;
+  border-right: 1px solid #858585;
+  padding-left: 0px;
+}
+header .panel__accountpanel .aside-hover {
+  transition: 0.5s;
+}
+header .panel__accountpanel .aside-hover:hover {
+  background-color: #858585;
+}
+header .panel a {
+  text-decoration: none;
+}
+header .panel span {
+  color: #010101;
+  font-size: 0.9rem;
+}
+header .panel img {
+  color: #ed4378;
+  margin: auto 0;
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+  transform-origin: center center;
+  transform: scale(1.1);
+}
+<<<<<<< Updated upstream
+
+@media (min-width: 576px) {
+  header {
+    position: static;
+    align-items: center;
+  }
+  header .panel {
+=======
+header .underline {
+  border-top: 2px solid #858585;
+  width: 140%;
+}
+header .mainheader {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+header .mainheader__sectionleft {
+  display: flex;
+  flex-direction: row;
+}
+header .mainheader__sectionleft--btn {
+  margin: 15px;
+  margin-left: 10px;
+  margin-right: 0px;
+  padding: 5px;
+  min-width: 50px;
+  border: 1px solid #ebecf2;
+  background-color: none;
+  border-radius: 5px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+header .mainheader__sectionleft--btn i {
+  transition: 0.5s;
+  scale: 1.5;
+}
+header .mainheader__sectionleft--btn:hover {
+  border: 1px solid #858585;
+  background-color: #ebccd2;
+}
+header .mainheader__sectionleft--btn:hover i {
+  transform: scale(1.2);
+}
+header .mainheader__sectionleft--logo {
+  display: none;
+  margin: 5px;
+  margin-left: 0px;
+}
+header .mainheader__sectionleft--logo img {
+  scale: 0.6;
+}
+header .mainheader__sectionright {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+header .mainheader__sectionright--search {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 2px solid;
+  max-height: 40%;
+  margin-right: 10px;
+}
+header .mainheader__sectionright--search input {
+  font-size: 0.9rem;
+  margin: 0;
+  background-color: #ebecf2;
+  border: none;
+  padding: 5px;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+header .mainheader__sectionright--search input:focus {
+  border: none;
+  box-shadow: none;
+}
+header .mainheader__sectionright--search button {
+  border: none;
+  margin-right: 10px;
+  cursor: pointer;
+  background-color: #ebecf2;
+}
+header .mainheader__sectionright--search button img {
+  background-color: #ebecf2;
+  transition: 0.5s;
+}
+header .mainheader__sectionright--search button:hover img {
+  transform: scale(1.2);
+}
+header .mainheader__sectionright--basket {
+  position: relative;
+  padding: 10px;
+  margin-right: 10px;
+}
+header .mainheader__sectionright--basket .basket_counter {
+  position: absolute;
+  bottom: 10%;
+  right: 10%;
+  font-size: 0.8rem;
+  background-color: #ebccd2;
+  border-radius: 50%;
+  padding: 3px;
+}
+
+@media (min-width: 576px) {
+  header {
+    align-items: center;
+>>>>>>> Stashed changes
+    width: 90%;
+  }
+  header .panel__accountpanel {
+    display: flex;
+    flex-direction: row;
+  }
+<<<<<<< Updated upstream
+}
+@media (min-width: 768px) {
+  header .panel {
+=======
+  header .mainheader__sectionleft--logo {
+    display: block;
+  }
+  header .mainheader__sectionleft--logo img {
+    scale: 0.7;
+  }
+  header .mainheader__sectionright--search input {
+    font-size: 1rem;
+  }
+  header .mainheader__sectionright--basket .basket_counter {
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+    font-size: 1rem;
+  }
+}
+@media (min-width: 768px) {
+  header {
+>>>>>>> Stashed changes
+    width: 80%;
+  }
+  header .panel span {
+    font-size: 1.1rem;
+  }
+  header .panel img {
+    transform: scale(1.2);
+  }
+}
+@media (min-width: 1200px) {
+<<<<<<< Updated upstream
+  header .panel {
+=======
+  header {
+>>>>>>> Stashed changes
+    width: 75%;
+  }
+  header .panel span {
+    font-size: 1.25rem;
+  }
+  header .panel img {
+    transform: scale(1.4);
+  }
+}/*# sourceMappingURL=aside.css.map */
