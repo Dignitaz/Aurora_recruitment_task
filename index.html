@@ -8,11 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet"> 
-<<<<<<< Updated upstream
     <script src="https://kit.fontawesome.com/703c3a322d.js" crossorigin="anonymous"></script>
-=======
-<script src="https://kit.fontawesome.com/703c3a322d.js" crossorigin="anonymous"></script>
->>>>>>> Stashed changes
 </head>
 <body>
 <header>
@@ -26,18 +22,10 @@
             <a href="/"><div class="panel__accountpanel--register aside-hover"><img src="./img/rejestration.png" alt="rejestration"><span>Rejestracja</span></div></a>
         </div>
      </aside>
-<<<<<<< Updated upstream
-     <section class="mainheader">
-        <div class="mainheader__btn">
-        </div>
-        <div class="mainheader__logo"></div>
-        <div class="mainheader__search"></div>
-        <div class="mainheader__basket"></div>
-=======
      <div class="underline"></div>
      <section class="mainheader">
         <div class="mainheader__sectionleft">
-            <button class="mainheader__sectionleft--btn">
+            <button id="mobile_menu_btn" class="mainheader__sectionleft--btn">
                 <i class="fa-solid fa-bars"></i>
             </button>
             <div class="mainheader__sectionleft--logo">
@@ -49,19 +37,65 @@
                 <input id="browser_input" placeholder="Co chcesz kupić?">
                 <button><img src="./img/search.png" alt="search button"></button>
             </div>
-            <div class="mainheader__sectionright--basket">
-                <a href="/"><img src="./img/basket.png" alt="shopping basket"></a>
-                <div class="basket_counter">2</div>
+            <a href="/" style="text-decoration: none;"><div class="mainheader__sectionright--basket">
+                <img src="./img/basket.png" alt="shopping basket">
+                <div class="basket_counter"><p>2</p></div>
+                <p>Twój koszyk</p>
+            </div>
+            </a>
+            </div>
+            
+        </div>
+     </section>
+     <nav class="menupanel">
+        <div class="menupanel__mobile mobileMenuHidden" >
+            <div class="menupanel__mobile--navigation">
+                <ul>
+                    <li  class="navigation-title active-category" >Kategorie</li>
+                    <li  class="navigation-title" >Konto</li>
+                </ul>
+            </div>
+                <div class="swiping-menu">
+                    <div class="swiping-menu__left">
+                        <ul class="swiping-menu_categories">
+                            <li>Kategorie</li>
+                            <li>Nowości</li>
+                            <li>Promocje</li>
+                            <li>Wyprzedaże</li>
+                            <li>Kolekcje sezony</li>
+                            <li>Nasza oferta</li>
+                            <li>Trendy 2018</li>
+                            <li>Blog</li>
+                            <li>kontakt</li>
+                        </ul>
+                    </div>
+                    <div class="swiping-menu__right">
+                        <ul class="swiping-menu_account">
+                            <li>Zaloguj się</li>
+                            <li>Zarejestruj się</li>
+                        </ul>
+                    </div>
+
+                </div>
+            
+        </div>
+        <div class="menupanel__classic">
+            <div class="menupanel__classic--list">
+                <ul>
+                    <li>Kategorie</li>
+                    <li>Nowości</li>
+                    <li>Promocje</li>
+                    <li>Wyprzedaże</li>
+                    <li>Kolekcje sezony</li>
+                    <li>Nasza oferta</li>
+                    <li>Trendy 2018</li>
+                    <li>Blog</li>
+                    <li>kontakt</li>
+                </ul>
             </div>
         </div>
-
-
->>>>>>> Stashed changes
-     </section>
-     <nav class="menupanel"></nav>
+     </nav>
 </header>
-
-
     <script src="./js/main.js"></script>
 </body>
 </html>

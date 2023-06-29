@@ -11,42 +11,27 @@ html {
 body {
   font-family: "Roboto", sans-serif;
   background-color: #ebecf2;
-<<<<<<< Updated upstream
-=======
   display: flex;
   flex-direction: column;
   align-items: center;
->>>>>>> Stashed changes
 }
 
 header {
   display: flex;
   flex-direction: column;
-<<<<<<< Updated upstream
-  position: sticky;
-  border-bottom: 2px solid #858585;
-  align-items: start;
-=======
   width: 100%;
->>>>>>> Stashed changes
 }
 header .panel {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-<<<<<<< Updated upstream
-=======
   width: 100%;
->>>>>>> Stashed changes
   padding-top: 10px;
   padding-bottom: 10px;
 }
 header .panel__contactpanel {
   margin: auto 0;
-<<<<<<< Updated upstream
-=======
   align-items: start;
->>>>>>> Stashed changes
 }
 header .panel__contactpanel--call {
   display: inline;
@@ -56,10 +41,7 @@ header .panel__contactpanel--mail {
 }
 header .panel__accountpanel {
   display: none;
-<<<<<<< Updated upstream
-=======
   align-items: end;
->>>>>>> Stashed changes
 }
 header .panel__accountpanel--login {
   display: inline;
@@ -97,22 +79,12 @@ header .panel img {
   transform-origin: center center;
   transform: scale(1.1);
 }
-<<<<<<< Updated upstream
-
-@media (min-width: 576px) {
-  header {
-    position: static;
-    align-items: center;
-  }
-  header .panel {
-=======
 header .underline {
   border-top: 2px solid #858585;
   width: 140%;
 }
 header .mainheader {
   display: flex;
-  justify-content: space-between;
   width: 100%;
 }
 header .mainheader__sectionleft {
@@ -154,13 +126,16 @@ header .mainheader__sectionright {
   display: flex;
   flex-direction: row;
   align-items: center;
+  width: 100%;
 }
 header .mainheader__sectionright--search {
   display: flex;
   flex-direction: row;
+  flex-grow: 1;
+  justify-content: space-between;
   border-bottom: 2px solid;
   max-height: 40%;
-  margin-right: 10px;
+  margin-left: 5%;
 }
 header .mainheader__sectionright--search input {
   font-size: 0.9rem;
@@ -189,35 +164,69 @@ header .mainheader__sectionright--search button:hover img {
   transform: scale(1.2);
 }
 header .mainheader__sectionright--basket {
+  display: flex;
+  flex-direction: row;
   position: relative;
   padding: 10px;
-  margin-right: 10px;
 }
 header .mainheader__sectionright--basket .basket_counter {
   position: absolute;
-  bottom: 10%;
-  right: 10%;
+  width: 23px;
+  height: 23px;
+  bottom: 0%;
+  left: 18%;
   font-size: 0.8rem;
   background-color: #ebccd2;
   border-radius: 50%;
   padding: 3px;
 }
+header .mainheader__sectionright--basket .basket_counter p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+header .mainheader__sectionright--basket > p {
+  display: none;
+  margin: auto 0px auto 10px;
+  color: #010101;
+}
+header .menupanel__mobile {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 15% 0px 15%;
+}
+header .menupanel__mobile--navigation ul {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+}
+header .menupanel__mobile--navigation li {
+  width: 50%;
+  list-style: none;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 1.4rem;
+  cursor: pointer;
+  margin-bottom: 10px;
+  border-bottom: 4px solid transparent;
+}
+header .menupanel__mobile--navigation .active-category {
+  border-bottom: 4px solid #ebccd2;
+}
+header .menupanel__classic {
+  display: none;
+}
 
 @media (min-width: 576px) {
   header {
     align-items: center;
->>>>>>> Stashed changes
     width: 90%;
   }
   header .panel__accountpanel {
     display: flex;
     flex-direction: row;
   }
-<<<<<<< Updated upstream
-}
-@media (min-width: 768px) {
-  header .panel {
-=======
   header .mainheader__sectionleft--logo {
     display: block;
   }
@@ -229,14 +238,15 @@ header .mainheader__sectionright--basket .basket_counter {
   }
   header .mainheader__sectionright--basket .basket_counter {
     position: absolute;
-    bottom: 10%;
-    right: 10%;
     font-size: 1rem;
+  }
+  header .mainheader__sectionright--basket > p {
+    display: block;
+    font-size: 0.8rem;
   }
 }
 @media (min-width: 768px) {
   header {
->>>>>>> Stashed changes
     width: 80%;
   }
   header .panel span {
@@ -245,13 +255,34 @@ header .mainheader__sectionright--basket .basket_counter {
   header .panel img {
     transform: scale(1.2);
   }
+  header .mainheader__sectionleft--btn {
+    display: none;
+  }
+  header .mainheader__sectionleft--logo {
+    display: block;
+  }
+  header .mainheader__sectionleft--logo img {
+    scale: 0.8;
+  }
+  header .mainheader__sectionright--search {
+    margin-left: 10%;
+    margin-right: 5%;
+  }
+  header .mainheader__sectionright--search input {
+    font-size: 1.2rem;
+  }
+  header .mainheader__sectionright--search img {
+    transform: scale(1.2);
+  }
+  header .mainheader__sectionright--basket .basket_counter {
+    font-size: 1rem;
+  }
+  header .mainheader__sectionright--basket > p {
+    font-size: 1.2rem;
+  }
 }
 @media (min-width: 1200px) {
-<<<<<<< Updated upstream
-  header .panel {
-=======
   header {
->>>>>>> Stashed changes
     width: 75%;
   }
   header .panel span {
@@ -259,5 +290,30 @@ header .mainheader__sectionright--basket .basket_counter {
   }
   header .panel img {
     transform: scale(1.4);
+  }
+  header .mainheader__sectionleft--logo {
+    margin-top: 20px;
+  }
+  header .mainheader__sectionleft--logo img {
+    scale: 1.3;
+  }
+  header .mainheader__sectionright--search {
+    margin-top: 20px;
+    margin-left: 20%;
+  }
+  header .mainheader__sectionright--search input {
+    font-size: 1.3rem;
+  }
+  header .mainheader__sectionright--search img {
+    transform: scale(1.3);
+  }
+  header .mainheader__sectionright--basket {
+    margin-top: 20px;
+  }
+  header .mainheader__sectionright--basket .basket_counter {
+    font-size: 1.1rem;
+  }
+  header .mainheader__sectionright--basket > p {
+    font-size: 1.3rem;
   }
 }/*# sourceMappingURL=aside.css.map */
