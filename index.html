@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aurora Box</title>
-    <link rel="stylesheet" href="./css/aside.css">
+    <link rel="stylesheet" type="text/css" href="./css/all.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet"> 
@@ -12,89 +12,10 @@
 </head>
 <body>
 <header>
-     <aside class="panel">
-        <div class="panel__contactpanel">
-            <div class="panel__contactpanel--call"><a href="tel:+48293939098"><img src="./img/phone.png" alt="phone_contact"><span>+48 293 939 098</span></a></div>
-            <div class="panel__contactpanel--mail"><a href="mailto:kontakt@aurorabox.pl"><img src="./img/email.png" alt="email_contact"></i><span>kontakt@aurorabox.pl</span></a></div>
-        </div>
-        <div class="panel__accountpanel">
-            <a href="/"><div class="panel__accountpanel--login aside-hover"><img src="./img/account-logo.png" alt="log_in"><span>Zaloguj się</span></div></a>
-            <a href="/"><div class="panel__accountpanel--register aside-hover"><img src="./img/rejestration.png" alt="rejestration"><span>Rejestracja</span></div></a>
-        </div>
-     </aside>
+    @@include('./section.html')
      <div class="underline"></div>
-     <section class="mainheader">
-        <div class="mainheader__sectionleft">
-            <button id="mobile_menu_btn" class="mainheader__sectionleft--btn">
-                <i class="fa-solid fa-bars"></i>
-            </button>
-            <div class="mainheader__sectionleft--logo">
-                <a href="/"><img src="./img/companylogo.png" alt="company logo"></a>
-            </div>
-        </div>
-        <div class="mainheader__sectionright">
-            <div class="mainheader__sectionright--search">
-                <input id="browser_input" placeholder="Co chcesz kupić?">
-                <button><img src="./img/search.png" alt="search button"></button>
-            </div>
-            <a href="/" style="text-decoration: none;"><div class="mainheader__sectionright--basket">
-                <img src="./img/basket.png" alt="shopping basket">
-                <div class="basket_counter"><p>2</p></div>
-                <p>Twój koszyk</p>
-            </div>
-            </a>
-            </div>
-            
-        </div>
-     </section>
-     <nav class="menupanel">
-        <div class="menupanel__mobile mobileMenuHidden" >
-            <div class="menupanel__mobile--navigation">
-                <ul>
-                    <li  class="navigation-title active-category" >Kategorie</li>
-                    <li  class="navigation-title" >Konto</li>
-                </ul>
-            </div>
-                <div class="swiping-menu">
-                    <div class="swiping-menu__left">
-                        <ul class="swiping-menu_categories">
-                            <li>Kategorie</li>
-                            <li>Nowości</li>
-                            <li>Promocje</li>
-                            <li>Wyprzedaże</li>
-                            <li>Kolekcje sezony</li>
-                            <li>Nasza oferta</li>
-                            <li>Trendy 2018</li>
-                            <li>Blog</li>
-                            <li>kontakt</li>
-                        </ul>
-                    </div>
-                    <div class="swiping-menu__right">
-                        <ul class="swiping-menu_account">
-                            <li>Zaloguj się</li>
-                            <li>Zarejestruj się</li>
-                        </ul>
-                    </div>
-
-                </div>
-            
-        </div>
-        <div class="menupanel__classic">
-            <div class="menupanel__classic--list">
-                <ul>
-                    <li>Kategorie</li>
-                    <li>Nowości</li>
-                    <li>Promocje</li>
-                    <li>Wyprzedaże</li>
-                    <li>Kolekcje sezony</li>
-                    <li>Nasza oferta</li>
-                    <li>Trendy 2018</li>
-                    <li>Blog</li>
-                    <li>kontakt</li>
-                </ul>
-            </div>
-        </div>
-     </nav>
+     @@include('./header.html')
+     @@include('./nav.html')
 </header>
     <script src="./js/main.js"></script>
 </body>

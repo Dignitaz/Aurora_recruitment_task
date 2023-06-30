@@ -1,0 +1,57 @@
+@import 'colors';
+
+header{
+
+    .menupanel{
+        position: relative;
+        &__mobile{
+            display: flex;
+            flex-direction: column;
+            margin: 20px 15% 0px 15%;
+
+            &--navigation{
+                ul{
+                    display: flex;
+                    flex-direction: row;
+                    flex-grow: 1;
+                }
+                li{
+                    width: 50%;
+                    list-style: none;
+                    text-align: center;
+                    padding: 10px 0;
+                    font-size: 1.4rem;
+                    cursor: pointer;
+                    margin-bottom: 10px;
+                    border-bottom: 4px solid transparent ;
+                }
+                .active-category{
+                    border-bottom: 4px solid $pink-inserts;
+                }
+            }
+        }
+
+
+        &__classic{
+            display: none;
+        }
+    }
+}
+
+// @media (min-width: 576px) { 
+//     header{
+//     }
+
+
+//  }
+
+// @media (min-width: 768px) { 
+//     header{
+//     }
+//  }
+
+
+// @media (min-width: 1200px) {     
+//     header{
+// } }
+

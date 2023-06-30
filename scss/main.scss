@@ -1,0 +1,136 @@
+@import 'colors';
+
+*, *::after, *::before{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    font-size: 14px;}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color:$bg-color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    //aside panel
+    .panel{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        padding-top:10px ;
+        padding-bottom: 10px;
+        &__contactpanel{
+            margin: auto 0 ;
+            align-items: start;
+            &--call{
+                display: inline;
+            }
+            &--mail{
+                display: inline;
+            }
+            }
+        &__accountpanel{
+            display: none;
+            align-items: end;
+                &--login{
+                    display: inline;
+                    padding: 10px;
+                    padding-top: 14px;
+                    padding-left: 0px;
+                    border-left: 1px solid $text-color-expire;
+                    border-right: 1px solid $text-color-expire;
+                }
+                &--register{
+                    display: inline;
+                    padding: 10px;
+                    padding-top: 14px;
+                    border-right: 1px solid $text-color-expire;
+                    padding-left: 0px;
+                }
+                .aside-hover{
+                    transition: 0.5s;
+                }
+                .aside-hover:hover{
+                    background-color: $text-color-expire;
+                }
+            
+        }
+
+        a{
+            text-decoration: none;
+        }
+        span{
+            color: $text-color;
+            font-size: 0.9rem;
+        }
+        img{
+            color: $pink-main;
+            margin: auto 0;
+            margin-right: 0.5rem;
+            margin-left: 0.5rem;
+            transform-origin: center center;
+            transform: scale(1.1);    }
+}
+.underline{
+    border-top: 2px solid $text-color-expire;
+    width: 140%;
+}
+    }
+
+
+
+
+@media (min-width: 576px) { 
+    header{
+        align-items: center;
+        width: 90%;
+        .panel{
+            &__accountpanel{
+                display: flex;
+                flex-direction: row;
+            }
+        }
+    }
+
+
+ }
+
+@media (min-width: 768px) { 
+    header{
+        width: 80%;
+        .panel{
+
+            span{
+                font-size: 1.1rem;
+            }
+            img{
+                transform: scale(1.2);    }
+        }
+    }
+ }
+
+
+@media (min-width: 1200px) {     
+    header{
+        width: 75%;
+    .panel{
+
+        span{
+            font-size: 1.25rem;
+        }
+        img{
+            transform: scale(1.4);    
+        }
+    }
+
+} }
