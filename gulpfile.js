@@ -14,7 +14,7 @@ function styles() {
     .pipe(scss())
     .pipe(autoPrefixer("last 2 versions"))
     .pipe(cssMinify())
-    .pipe(dest("./build/css"));
+    .pipe(dest("./docs/css"));
 }
 
 function html() {
@@ -26,17 +26,17 @@ function html() {
         basepath: "@file",
       })
     )
-    .pipe(gulp.dest("./build"));
+    .pipe(gulp.dest("./docs"));
 }
 
 const jsMinify = require("gulp-terser");
 
 function scripts() {
-  return src("./js/*.js").pipe(jsMinify()).pipe(dest("./build/js"));
+  return src("./js/*.js").pipe(jsMinify()).pipe(dest("./docs/js"));
 }
 
 async function imgs() {
-  gulp.src(["./img/**/*"]).pipe(gulp.dest("./build/img"));
+  gulp.src(["./img/**/*"]).pipe(gulp.dest("./docs/img"));
 }
 
 function reload() {
@@ -54,7 +54,7 @@ async function buildAndReload() {
 function watchTask() {
   server.init({
     server: {
-      baseDir: "./build/",
+      baseDir: "./docs/",
     },
   });
   buildAndReload();

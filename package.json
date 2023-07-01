@@ -15,9 +15,10 @@
   "bugs": {
     "url": "https://github.com/Dignitaz/Aurora_recruitment_task/issues"
   },
-  "homepage": "https://github.com/Dignitaz/Aurora_recruitment_task#readme",
+ "homepage": "https://github.com/Dignitaz/Aurora_recruitment_task#readme",
   "devDependencies": {
     "browser-sync": "^2.29.3",
+    "gh-pages": "^5.0.0",
     "gulp": "^4.0.2",
     "gulp-file-include": "^2.3.0",
     "gulp-sass": "^5.1.0",
