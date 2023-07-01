@@ -17,3 +17,14 @@ Sobolewski Przemysław
 
 Link to GH Pages:
 https://dignitaz.github.io/Aurora_recruitment_task/
+
+## Installation process
+
+Install Aurora_recruitment_task with npm
+
+```bash
+  npm clone https://github.com/Dignitaz/Aurora_recruitment_task
+  cd Aurora_recruitment_task
+  npm install
+  gulp
+```
