@@ -1,13 +1,9 @@
 @import 'colors';
 
 header{
+    position: relative;
     .menupanel{
-        position: absolute;
-        top: 15%;
-        left: 50%;
-        transform: translate(-50%);
-        width: 70%;
-        transition: 1s;
+         width: 100%;
         &__mobile{
             display: flex;
             flex-direction: column;
@@ -114,11 +110,6 @@ header{
                                     transform: scaleX(1);
                                     transform-origin: left;
                                 }
-                                .active-li{
-                                    color: $pink-main;
-                                    background-color: $active-category;
-                                    border-bottom: 3px solid $pink-inserts;
-                                }
                             }
 
                     }
@@ -186,6 +177,7 @@ header{
 @media (min-width: 768px) { 
     header{
         .menupanel{
+            width: 80%;
             &__mobile{
             display: none;}
             &__classic{

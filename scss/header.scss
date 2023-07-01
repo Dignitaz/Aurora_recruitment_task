@@ -14,11 +14,11 @@ header{
                 padding: 5px;
                 min-width: 50px;
                 border: 1px solid $bg-color;
-                background-color: none;
                 border-radius: 5px;
                 transition: 0.5s;
                 cursor: pointer;
                 i{  
+                    color: $pink-main;
                     transition: 0.5s;
                     scale: 1.5;
                 }
