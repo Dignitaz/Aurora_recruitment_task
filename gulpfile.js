@@ -1,7 +1,6 @@
 const { src, dest, series, watch } = require("gulp");
 const gulp = require("gulp");
 const fileinclude = require("gulp-file-include");
-// styles
 const scss = require("gulp-sass")(require("sass"));
 const autoPrefixer = require("gulp-autoprefixer");
 const cssMinify = require("gulp-clean-css");
@@ -18,15 +17,9 @@ function styles() {
     .pipe(dest("./build/css"));
 }
 
-//html
 function html() {
   return gulp
-    .src([
-      "*.html",
-      "!header.html", // ignore
-      "!nav.html", // ignore
-      "!section.html", // ignore
-    ])
+    .src(["*.html", "!mainHeader.html", "!nav.html", "!topHeader.html"])
     .pipe(
       fileinclude({
         prefix: "@@",
@@ -36,7 +29,6 @@ function html() {
     .pipe(gulp.dest("./build"));
 }
 
-// scripts
 const jsMinify = require("gulp-terser");
 
 function scripts() {
@@ -51,14 +43,22 @@ function reload() {
   server.reload();
 }
 
+async function buildAndReload() {
+  await html();
+  await styles();
+  await scripts();
+  await imgs();
+  reload();
+}
+
 function watchTask() {
   server.init({
     server: {
       baseDir: "./build/",
     },
   });
-  reload();
-  watch(["./scss/**/*.scss", "*.html"], series(styles, html, imgs, scripts));
+  buildAndReload();
+  watch(["./scss/**/*.scss", "*.html", "./js/**/*.js"], series(buildAndReload));
 }
 
 exports.default = series(styles, html, scripts, imgs, watchTask, reload);

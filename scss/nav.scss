@@ -1,57 +1,215 @@
 @import 'colors';
 
 header{
-
     .menupanel{
-        position: relative;
+        position: absolute;
+        top: 15%;
+        left: 50%;
+        transform: translate(-50%);
+        width: 70%;
+        transition: 1s;
         &__mobile{
             display: flex;
             flex-direction: column;
-            margin: 20px 15% 0px 15%;
-
             &--navigation{
-                ul{
+                position: relative;
+                .navigation-title-list{
                     display: flex;
                     flex-direction: row;
-                    flex-grow: 1;
+                    width: 100%;
+                    .navigation-title{
+                        list-style: none;
+                        padding: 10px 0;
+                        font-size: 1.4rem;
+                        cursor: pointer;
+                        margin-bottom: 10px;
+                        border-bottom: 4px solid transparent ;
+                        width: 50%;
+                        text-align: center;
+                    }
+                    .active-category{
+                        border-bottom: 4px solid $pink-inserts;
+                    }
                 }
-                li{
-                    width: 50%;
-                    list-style: none;
-                    text-align: center;
-                    padding: 10px 0;
-                    font-size: 1.4rem;
-                    cursor: pointer;
-                    margin-bottom: 10px;
-                    border-bottom: 4px solid transparent ;
+                .swiping-menu{
+                    position: relative;
+                    display: flex;
+                    flex-direction: row;
+                    transition: .5s;
+                    width: 100%;
+                    .swiping-menu__left{
+                        position: absolute;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        text-align: center;
+                        left: 50%;
+                        transform: translate(-50%);
+                        .swiping-menu_categories{
+                            li{
+                                position: relative;
+                                list-style: none;
+                                padding: 10px;
+                                font-size: 1.4rem;
+                                cursor: pointer;
+                                text-transform: uppercase;
+                                border-bottom: 3px solid transparent;
+                            }
+                            .hover-link::after{
+                                position: absolute;
+                                content: '';
+                                bottom: -3px;
+                                left: 0;
+                                background-color: $pink-inserts;
+                                height: 3px;
+                                width: 100%;
+                                transform: scaleX(0);
+                                transform-origin: right;
+                                transition: transform .3s;
+                            }
+                            .hover-link:hover::after{
+                                transform: scaleX(1);
+                                transform-origin: left;
+                            }
+                            .active-li{
+                                color: $pink-main;
+                                background-color: $active-category;
+                                border-bottom: 3px solid $pink-inserts;
+                            }
+                        }
+                    }
+                    .swiping-menu__right{
+                        position: absolute;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        text-align: center;
+                        left: 150%;
+                        transform: translate(-50%);
+                            .swiping-menu_categories{
+                                li{
+                                    position: relative;
+                                    list-style: none;
+                                    padding: 10px;
+                                    font-size: 1.4rem;
+                                    cursor: pointer;
+                                    text-transform: uppercase;
+                                    border-bottom: 3px solid transparent;
+                                }
+                                .hover-link::after{
+                                    position: absolute;
+                                    content: '';
+                                    bottom: -3px;
+                                    left: 0;
+                                    background-color: $pink-inserts;
+                                    height: 3px;
+                                    width: 100%;
+                                    transform: scaleX(0);
+                                    transform-origin: right;
+                                    transition: transform .3s;
+                                }
+                                .hover-link:hover::after{
+                                    transform: scaleX(1);
+                                    transform-origin: left;
+                                }
+                                .active-li{
+                                    color: $pink-main;
+                                    background-color: $active-category;
+                                    border-bottom: 3px solid $pink-inserts;
+                                }
+                            }
+
+                    }
                 }
-                .active-category{
-                    border-bottom: 4px solid $pink-inserts;
+                .swiped{
+                    left: -100%;
                 }
             }
         }
-
-
         &__classic{
             display: none;
+            flex-direction: row;
+            justify-content: center;
+            transform: translate(-15%);
+            &--list{
+                .classic-menu-list{
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    width: 130%;
+                    padding-bottom: 10px;
+                    border-bottom: 3px solid $text-color-expire;
+                    .classic-menu-category{ 
+                        position: relative;
+                        list-style: none;
+                        padding: 10px 10px 10px;
+                        margin: 0 5px;
+                        text-transform: uppercase;
+                        font-size: 1.2rem;
+                        cursor: pointer;
+                        border-bottom: 3px solid transparent;
+                    }
+                    .hover-link::after{
+                        position: absolute;
+                        content: '';
+                        bottom: -3px;
+                        left: 0;
+                        background-color: $pink-inserts;
+                        height: 3px;
+                        width: 100%;
+                        transform: scaleX(0);
+                        transform-origin: right;
+                        transition: transform .3s;
+                    }
+                    .hover-link:hover::after{
+                        transform: scaleX(1);
+                        transform-origin: left;
+                    }
+                    .active-li{
+                        color: $pink-inserts;
+                        border-bottom: 3px solid $pink-inserts;
+                    }
+                }
+            }
         }
+    }
+    .mobileMenuHidden{
+        position: absolute;
+        left: 150%;
     }
 }
 
-// @media (min-width: 576px) { 
-//     header{
-//     }
 
+@media (min-width: 768px) { 
+    header{
+        .menupanel{
+            &__mobile{
+            display: none;}
+            &__classic{
+            display:flex;
+            }
+        }
+    
+    }
+ }
 
-//  }
-
-// @media (min-width: 768px) { 
-//     header{
-//     }
-//  }
-
-
-// @media (min-width: 1200px) {     
-//     header{
-// } }
+ @media (min-width: 1200px) { 
+    header{
+        .menupanel{
+            &__classic{
+                margin-top: 15px;
+                &--list{
+                    .classic-menu-list{
+                        .classic-menu-category{
+                            font-size: 1.3rem;
+                         }
+                    }}
+            }
+        }
+    
+    }
+ }
 
