@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aurora Box</title>
+    <link rel="stylesheet" type="text/css" href="./css/all.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet"> 
+    <script src="https://kit.fontawesome.com/703c3a322d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<header>
+    <div class="panel">
+    <div class="panel__contactpanel">
+        <div class="panel__contactpanel--call"><a href="tel:+48293939098"><img src="./img/phone.png" alt="phone_contact"><span>+48 293 939 098</span></a></div>
+        <div class="panel__contactpanel--mail"><a href="mailto:kontakt@aurorabox.pl"><img src="./img/email.png" alt="email_contact"><span>kontakt@aurorabox.pl</span></a></div>
+    </div>
+    <div class="panel__accountpanel">
+        <a href="/"><div class="panel__accountpanel--login aside-hover"><img src="./img/account-logo.png" alt="log_in"><span>Zaloguj się</span></div></a>
+        <a href="/"><div class="panel__accountpanel--register aside-hover"><img src="./img/rejestration.png" alt="rejestration"><span>Rejestracja</span></div></a>
+    </div>
+</div>
+     <div class="underline"></div>
+     <div class="mainheader">
+    <div class="mainheader__sectionleft">
+        <button id="mobile_menu_btn" class="mainheader__sectionleft--btn">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <div class="mainheader__sectionleft--logo">
+            <a href="/"><img src="./img/companylogo.png" alt="company logo"></a>
+        </div>
+    </div>
+    <div class="mainheader__sectionright">
+        <div class="mainheader__sectionright--search">
+            <input id="browser_input" placeholder="Co chcesz kupić?">
+            <button><img src="./img/search.png" alt="search button"></button>
+        </div>
+        <a href="/" style="text-decoration: none;"><div class="mainheader__sectionright--basket">
+            <img src="./img/basket.png" alt="shopping basket">
+            <div class="basket_counter"><p>2</p></div>
+            <p>Twój koszyk</p>
+        </div>
+        </a>
+        </div>
+    </div>
+     
+<nav class="menupanel">
+    <div class="menupanel__mobile mobileMenuHidden" >
+        <div class="menupanel__mobile--navigation">
+            <ul class="navigation-title-list">
+                <li  class="navigation-title active-category" ><p>Kategorie</p></li>
+                <li  class="navigation-title" >Konto</li>
+            </ul>
+            <div class="swiping-menu">
+                <div class="swiping-menu__left swipe-menu-active">
+                    <ul class="swiping-menu_categories">
+                        <li class="swiping-menu_category hover-link">Kategorie</li>
+                        <li class="swiping-menu_category hover-link">Nowości</li>
+                        <li class="swiping-menu_category hover-link">Promocje</li>
+                        <li class="swiping-menu_category hover-link">Wyprzedaże</li>
+                        <li class="swiping-menu_category hover-link">Kolekcje sezonu</li>
+                        <li class="swiping-menu_category hover-link">Nasza oferta</li>
+                        <li class="swiping-menu_category hover-link">Trendy 2018</li>
+                        <li class="swiping-menu_category hover-link">Blog</li>
+                        <li class="swiping-menu_category hover-link">kontakt</li>
+                    </ul>
+                </div>
+                <div class="swiping-menu__right ">
+                    <ul class="swiping-menu_categories">
+                        <li class="swiping-menu_categories hover-link">Zaloguj się</li>
+                        <li class="swiping-menu_categories hover-link">Załóż konto</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        
+    </div>
+    <div class="menupanel__classic">
+        <div class="menupanel__classic--list">
+            <ul class="classic-menu-list">
+                <li class="classic-menu-category hover-link active-li">Kategorie</li>
+                <li class="classic-menu-category hover-link">Nowości</li>
+                <li class="classic-menu-category hover-link">Promocje</li>
+                <li class="classic-menu-category hover-link">Wyprzedaże</li>
+                <li class="classic-menu-category hover-link">Kolekcje sezony</li>
+                <li class="classic-menu-category hover-link">Nasza oferta</li>
+                <li class="classic-menu-category hover-link">Trendy 2018</li>
+                <li class="classic-menu-category hover-link">Blog</li>
+                <li class="classic-menu-category hover-link">kontakt</li>
+            </ul>
+        </div>
+    </div>
+ </nav>
+
+
+</header>
+    <script src="./js/main.js"></script>
+</body>
+</html>
